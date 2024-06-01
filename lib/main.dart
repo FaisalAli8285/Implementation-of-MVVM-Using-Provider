@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:provider_mvm/utils/routes/route_name.dart';
 import 'package:provider_mvm/utils/routes/routes.dart';
 import 'package:provider_mvm/viewmodel/auth_viewmodel.dart';
+import 'package:provider_mvm/viewmodel/home_view_model.dart';
 import 'package:provider_mvm/viewmodel/user_view_model.dart';
 
 class PostHttpOverrides extends HttpOverrides {
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthViewModel()),
         ChangeNotifierProvider(create: (_) => UserViewModel()),
+        ChangeNotifierProvider(create: (_) => HomeViewViewModel()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
